@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<recognition>
+		<extension>ini</extension>
+		<extension>cnf</extension>
+		<extension>gitignore</extension>
+		<extension>editorconfig</extension>
+		<extension>env</extension>
+	</recognition>
+	<color>0.756, 0.756, 0.756</color><!-- same as Base.mode, for now -->
+</settings>

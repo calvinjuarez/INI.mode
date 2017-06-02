@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE syntax SYSTEM "symbol.dtd">
+<symbols>
+
+	<symbol id="Group Start" image="SymbolGroup" useforautocomplete="no" indentation="0" show-in-comments="yes">
+		<regex>(?:[\n\r]|^)[ \t]*\[([^\]]+)(?:\](?:[\n\r]|$))</regex>
+	</symbol>
+
+	<!-- Borrowed from JavaScript.mode's RegexSymbols.xml's line comment pragma, replacing `//` w/ `#`, of course -->
+	<symbol id="Pragma marks" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="no" show-in-comments="yes">
+		<regex>;[ \t]*!([^\n\r]+)</regex>
+	</symbol>
+	<symbol id="Pragma marks" font-weight="normal" font-style="normal" image="SymbolMark" indentation="0" ignoreblocks="no" show-in-comments="yes">
+		<regex>#[ \t]*!([^\n\r]+)</regex>
+	</symbol>
+
+</symbols>

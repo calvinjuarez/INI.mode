@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>SEEMode.INI</string>
+	<key>CFBundleName</key>
+	<string>INI</string>
+	<key>CodaAuthorString</key>
+	<string>Calvin Juárez</string>
+	<key>CodaDescriptionString</key>
+	<string>INI-like syntax highlighting for Coda 2.x.</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Calvin Juárez &lt;https://github.com/calvinjuarez&gt; (© 2017)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0-beta</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.0-beta</string>
+	<key>CFBundleGetInfoString</key>
+	<string>1.0-beta Calvin Juárez</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>SEEMinimumEngineVersion</key>
+	<string>3.5</string>
+</dict>
+</plist>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE syntax SYSTEM "syntax.dtd">
+<syntax>
+	<head>
+		<name>INI</name>
+		<charsintokens><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-@$"]]></charsintokens>
+		<charsincompletion><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-@$&lt;/=>!]]></charsincompletion>
+	</head>
+	<states>
+		<default id="Base" scope="meta.default">
+
+			<keywords id="Operators" useforautocomplete="no" scope="language.operator.ini" highlightInOrder="yes">
+				<regex>([\=])</regex>
+			</keywords>
+
+			<state id="Group Start" foldable="no" scope="markup.tag">
+				<begin>
+					<regex>(?:(?:[\n\r]|^)[ \t]*\[)</regex>
+					<autoend>\]</autoend>
+				</begin>
+				<end>
+					<regex>(?:\][ \t]*(?:[\n\r]|$))</regex>
+				</end>
+
+				<keywords id="Group Start Delimiters" useforautocomplete="no" scope="markup.tag">
+					<regex>((?:(?:[\n\r]|^)[ \t])*\[)</regex>
+					<regex>(\](?:[ \t]*[\n\r]|$))</regex>
+				</keywords>
+			</state>
+
+			<!-- comment borrowed from SQL.mode's SyntaxDefinition.xml, swapping `#` for `;` -->
+			<state id="Comment" type="comment" usespellchecking="yes" foldable="no" scope="comment.line.number-sign.ini">
+				<begin><regex>;</regex></begin>
+				<end><regex>[\n\r]</regex></end>
+				<import mode="Base" state="EmailAndURLContainerState" keywords-only="yes"/>
+			</state>
+			<!-- hash comment borrowed from SQL.mode's SyntaxDefinition.xml. -->
+			<state id="Hash Comment" type="comment" usespellchecking="yes" foldable="no" scope="comment.line.number-sign.ini">
+				<begin><regex>#</regex></begin>
+				<end><regex>[\n\r]</regex></end>
+				<import mode="Base" state="EmailAndURLContainerState" keywords-only="yes"/>
+			</state>
+
+			<!-- numbers borrowed from JavaScript.mode's SyntaxDefinition.xml. -->
+			<keywords id="Numbers" useforautocomplete="no" scope="constant.numeric.ini">
+				<regex>(?&lt;![\w\d\._])((?:(?:(?:[0-9]+\.[0-9]*)|(\.[0-9]+))(?:[eE][+\-]?[0-9]+)?[fFlL]?)|(?:(?:(?:[1-9][0-9]*)|0(?:[1-7][0-7]*)?|(?:0[xX][0-9a-fA-F]+))(?:(?:[uU][lL]?)|(?:[lL][uU]?))?))(?![\w\d\._])</regex>
+			</keywords>
+			<!-- other common value types borrowed from SQL.mode's SyntaxDefinition.xml. -->
+			<keywords id="Value Keywords" casesensitive="no" useforautocomplete="yes" scope="constant.numeric.keyword.ini">
+				<string>true</string>
+				<string>false</string>
+				<string>null</string>
+			</keywords>
+			<state id="String Single-quoted" type="string" usespellchecking="yes" scope="string.quoted.single.ini">
+				<begin><regex>'</regex></begin>
+				<end><regex>(?&lt;!\\)(\\\\)*'</regex></end>
+			</state>
+			<state id="String Double-quoted" type="string" usespellchecking="yes" scope="string.quoted.double.ini">
+				<begin><regex>"</regex></begin>
+				<end><regex>(?&lt;!\\)(\\\\)*"</regex></end>
+			</state>
+
+		</default>
+	</states>
+</syntax>

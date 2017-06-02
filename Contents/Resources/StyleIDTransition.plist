@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>/INI/Group Start</key>
+	<string>_Default</string>
+	<key>/INI/Group Start Delimiters</key>
+	<string>_Default.Tags</string>
+	<key>/INI/Comment</key>
+	<string>Comment</string>
+	<key>/INI/Hash Comment</key>
+	<string>Comment</string>
+	<key>/INI/Numbers</key>
+	<string>_Default.Numbers</string>
+	<key>/INI/Value Keywords</key>
+	<string>Value Keywords</string>
+	<key>/INI/String Single-quoted</key>
+	<string>String Single-quoted</string>
+	<key>/INI/String Double-quoted</key>
+	<string>String Double-quoted</string>
+	<key>_Default</key>
+	<string>_Default</string>
+</dict>
+</plist>
